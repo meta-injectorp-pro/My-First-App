@@ -1,0 +1,32 @@
+{
+  "project_info": {
+    "project_number": "123399619744",
+    "project_id": "meta-injector-license-server",
+    "storage_bucket": "meta-injector-license-server.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+  "mobilesdk_app_id": "...",
+  "android_client_info": {
+    "package_name": "com.metainjector.licensemanager",
+    "sha_1_fingerprints": [
+      "29:E9:BA:9A:3E:8E:1E:05:99:C1:0C:5D:D2:93:61:0F:5C:BC:49:B4"
+    ]
+  }
+},
+"oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyARQx0u0KiwpVc0efS0vhcmYjW_l06u4n0"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

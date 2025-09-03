@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/nav_dashboard"
+            android:icon="@drawable/ic_dashboard"
+            android:title="Dashboard" />
+        <item
+            android:id="@+id/nav_licenses"
+            android:icon="@drawable/ic_license_manager"
+            android:title="License Manager" />
+        <item
+            android:id="@+id/nav_key_generator"
+            android:icon="@drawable/ic_key_generator"
+            android:title="Key Generator" />
+        <item
+            android:id="@+id/nav_form_responses"
+            android:icon="@drawable/ic_form_responses"
+            android:title="Form Responses" />
+        <item
+            android:id="@+id/nav_bug_reports_icon"
+            android:icon="@drawable/ic_bug_reports_icon"
+            android:title="Bug Reports" />
+        <item
+            android:id="@+id/nav_security_logs_icon"
+            android:icon="@drawable/ic_security_logs_icon"
+            android:title="Security Logs" />
+        <item
+            android:id="@+id/nav_settings"
+            android:icon="@drawable/ic_settings"
+            android:title="Settings" />
+    </group>
+
+</menu>

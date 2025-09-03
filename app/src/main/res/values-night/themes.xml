@@ -1,0 +1,13 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <style name="Theme.MetaInjectorLicenseManager" parent="Theme.MaterialComponents.DayNight.NoActionBar">
+    </style>
+
+    <style name="AppTheme.NavigationView" parent="Widget.MaterialComponents.NavigationView">
+        <item name="android:background">?attr/colorSurface</item>
+        <item name="itemTextColor">?attr/colorOnSurface</item>
+        <item name="itemIconTint">?attr/colorOnSurface</item>
+        <item name="itemHorizontalPadding">24dp</item>
+        <item name="itemIconPadding">32dp</item>
+    </style>
+
+</resources>

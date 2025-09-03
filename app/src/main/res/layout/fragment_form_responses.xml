@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="#F0F4F8"
+    tools:context=".FormResponsesFragment">
+
+    <!-- Controls Section -->
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:cardCornerRadius="8dp"
+        app:cardElevation="2dp"
+        android:layout_margin="8dp">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="16dp">
+            <EditText
+                android:id="@+id/etSearchResponses"
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:hint="Search Responses..."
+                android:background="@drawable/search_background"
+                android:paddingStart="16dp"
+                android:paddingEnd="16dp"
+                android:drawableStart="@drawable/ic_search"
+                android:drawablePadding="12dp"/>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginTop="8dp">
+                <Button
+                    android:id="@+id/btnRefreshResponses"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Refresh"
+                    android:layout_marginEnd="4dp"/>
+                <Button
+                    android:id="@+id/btnDeleteResponse"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Delete Selected"
+                    android:backgroundTint="#DC3545"
+                    android:layout_marginStart="4dp"/>
+            </LinearLayout>
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
+
+    <!-- Response List -->
+    <ProgressBar
+        android:id="@+id/progressBarResponses"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="24dp"/>
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rvFormResponses"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:padding="8dp"
+        android:visibility="gone"
+        tools:listitem="@layout/list_item_form_response" />
+
+</LinearLayout>

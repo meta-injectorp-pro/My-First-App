@@ -1,0 +1,230 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.swiperefreshlayout.widget.SwipeRefreshLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/swipeRefreshLayoutDashboard"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".DashboardFragment">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#F0F4F8">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="8dp">
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/cardTotalSales"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:cardCornerRadius="8dp"
+                app:cardElevation="4dp"
+                app:cardUseCompatPadding="true">
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingHorizontal="16dp"
+                    android:paddingVertical="12dp">
+                    <TextView
+                        android:id="@+id/tvSalesTitle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Total Sales Amount:"
+                        android:textColor="#FFFFFF"
+                        android:textSize="16sp"
+                        android:textStyle="bold"
+                        android:layout_centerVertical="true"
+                        android:layout_alignParentStart="true"/>
+                    <TextView
+                        android:id="@+id/tvTotalSales"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="****"
+                        android:textColor="#FFFFFF"
+                        android:textSize="18sp"
+                        android:textStyle="bold"
+                        android:layout_toEndOf="@id/tvSalesTitle"
+                        android:layout_marginStart="8dp"
+                        android:layout_centerVertical="true"/>
+                    <ImageButton
+                        android:id="@+id/btnToggleSales"
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:layout_alignParentEnd="true"
+                        android:layout_centerVertical="true"
+                        android:background="?attr/selectableItemBackgroundBorderless"
+                        android:src="@drawable/ic_eye"
+                        app:tint="@android:color/white"
+                        android:contentDescription="Toggle sales visibility"/>
+                </RelativeLayout>
+            </androidx.cardview.widget.CardView>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+                <androidx.cardview.widget.CardView android:id="@+id/cardTotalUsers" style="@style/DashboardCard"><LinearLayout style="@style/DashboardCardLayout.Icon"><ImageView style="@style/DashboardCardIcon" android:src="@drawable/ic_total_users"/><TextView style="@style/DashboardCardTitle.White" android:text="Total Users" /><TextView style="@style/DashboardCardValue.White" android:id="@+id/tvTotalUsers" android:text="--" /></LinearLayout></androidx.cardview.widget.CardView>
+                <androidx.cardview.widget.CardView android:id="@+id/cardActiveUsers" style="@style/DashboardCard"><LinearLayout style="@style/DashboardCardLayout.Icon"><ImageView style="@style/DashboardCardIcon" android:src="@drawable/ic_active_users"/><TextView style="@style/DashboardCardTitle.White" android:text="Active Users"/><TextView style="@style/DashboardCardValue.White" android:id="@+id/tvActiveUsers" android:text="--"/></LinearLayout></androidx.cardview.widget.CardView>
+                <androidx.cardview.widget.CardView android:id="@+id/cardExpiredUsers" style="@style/DashboardCard"><LinearLayout style="@style/DashboardCardLayout.Icon"><ImageView style="@style/DashboardCardIcon" android:src="@drawable/ic_expired_users"/><TextView style="@style/DashboardCardTitle.White" android:text="Expired Users"/><TextView style="@style/DashboardCardValue.White" android:id="@+id/tvExpiredUsers" android:text="--"/></LinearLayout></androidx.cardview.widget.CardView>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+                <androidx.cardview.widget.CardView android:id="@+id/cardPendingUsers" style="@style/DashboardCard"><LinearLayout style="@style/DashboardCardLayout.Icon"><ImageView style="@style/DashboardCardIcon" android:src="@drawable/ic_pending_users"/><TextView style="@style/DashboardCardTitle.White" android:text="Pending Users"/><TextView style="@style/DashboardCardValue.White" android:id="@+id/tvPendingUsers" android:text="--"/></LinearLayout></androidx.cardview.widget.CardView>
+                <androidx.cardview.widget.CardView android:id="@+id/cardLicensesSent" style="@style/DashboardCard"><LinearLayout style="@style/DashboardCardLayout.Icon"><ImageView style="@style/DashboardCardIcon" android:src="@drawable/ic_licenses_sent"/><TextView style="@style/DashboardCardTitle.White" android:text="Licenses Sent"/><TextView style="@style/DashboardCardValue.White" android:id="@+id/tvLicensesSent" android:text="--"/></LinearLayout></androidx.cardview.widget.CardView>
+                <androidx.cardview.widget.CardView android:id="@+id/cardDisabledUsers" style="@style/DashboardCard"><LinearLayout style="@style/DashboardCardLayout.Icon"><ImageView style="@style/DashboardCardIcon" android:src="@drawable/ic_expired_users"/><TextView style="@style/DashboardCardTitle.White" android:text="Disabled Users"/><TextView style="@style/DashboardCardValue.White" android:id="@+id/tvDisabledUsers" android:text="--"/></LinearLayout></androidx.cardview.widget.CardView>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+                <androidx.cardview.widget.CardView android:id="@+id/cardBugReports" style="@style/DashboardCard"><LinearLayout style="@style/DashboardCardLayout.Icon"><ImageView style="@style/DashboardCardIcon" android:src="@drawable/ic_bug_reports"/><TextView style="@style/DashboardCardTitle.White" android:text="Bug Reports"/><TextView style="@style/DashboardCardValue.White" android:id="@+id/tvBugReports" android:text="--"/></LinearLayout></androidx.cardview.widget.CardView>
+                <androidx.cardview.widget.CardView android:id="@+id/cardSecurityLogs" style="@style/DashboardCard"><LinearLayout style="@style/DashboardCardLayout.Icon"><ImageView style="@style/DashboardCardIcon" android:src="@drawable/ic_security_logs"/><TextView style="@style/DashboardCardTitle.White" android:text="Security Logs"/><TextView style="@style/DashboardCardValue.White" android:id="@+id/tvSecurityLogs" android:text="--"/></LinearLayout></androidx.cardview.widget.CardView>
+                <androidx.cardview.widget.CardView android:id="@+id/cardTodayActivity" style="@style/DashboardCard"><LinearLayout style="@style/DashboardCardLayout.Icon"><ImageView style="@style/DashboardCardIcon" android:src="@drawable/ic_today_activity"/><TextView style="@style/DashboardCardTitle.White" android:text="Today's Activity"/><TextView style="@style/DashboardCardValue.White" android:id="@+id/tvTodayActivity" android:text="--"/></LinearLayout></androidx.cardview.widget.CardView>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+                <androidx.cardview.widget.CardView android:id="@+id/cardLifetimeActivity" style="@style/DashboardCard" android:layout_weight="1.5"><LinearLayout style="@style/DashboardCardLayout.Icon"><ImageView style="@style/DashboardCardIcon" android:src="@drawable/ic_lifetime_activity"/><TextView style="@style/DashboardCardTitle.White" android:text="Lifetime Activity"/><TextView style="@style/DashboardCardValue.White" android:id="@+id/tvLifetimeActivity" android:text="--"/></LinearLayout></androidx.cardview.widget.CardView>
+                <androidx.cardview.widget.CardView android:id="@+id/cardGlobalStats" style="@style/DashboardCard" android:layout_weight="1.5"><LinearLayout style="@style/DashboardCardLayout.Icon"><ImageView style="@style/DashboardCardIcon" android:src="@drawable/ic_global_stats"/><TextView style="@style/DashboardCardTitle.White" android:text="Global Stats"/><TextView style="@style/DashboardCardValue.White" android:id="@+id/tvGlobalStats" android:text="--"/></LinearLayout></androidx.cardview.widget.CardView>
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Visual Analytics"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                android:layout_marginTop="16dp"
+                android:layout_marginStart="8dp"
+                android:textColor="@color/black"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:baselineAligned="false">
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+                    <androidx.cardview.widget.CardView
+                        android:layout_width="match_parent"
+                        android:layout_height="250dp"
+                        app:cardCornerRadius="8dp"
+                        app:cardElevation="4dp"
+                        app:cardUseCompatPadding="true">
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:orientation="vertical">
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Users by Package (%)"
+                                android:padding="8dp"/>
+                            <com.github.mikephil.charting.charts.PieChart
+                                android:id="@+id/pieChartUsers"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"/>
+                        </LinearLayout>
+                    </androidx.cardview.widget.CardView>
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+                    <androidx.cardview.widget.CardView
+                        android:layout_width="match_parent"
+                        android:layout_height="250dp"
+                        app:cardCornerRadius="8dp"
+                        app:cardElevation="4dp"
+                        app:cardUseCompatPadding="true">
+                        <LinearLayout
+                            android:id="@+id/layoutUserCountByPackage"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical"
+                            android:padding="12dp">
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text="Users by Package (Count)"
+                                android:textStyle="bold"
+                                android:paddingBottom="8dp"/>
+                        </LinearLayout>
+                    </androidx.cardview.widget.CardView>
+                </LinearLayout>
+            </LinearLayout>
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="300dp"
+                app:cardCornerRadius="8dp"
+                app:cardElevation="4dp"
+                app:cardUseCompatPadding="true">
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Sales by Package (Count)"
+                        android:padding="8dp"/>
+                    <com.github.mikephil.charting.charts.BarChart
+                        android:id="@+id/barChartSales"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"/>
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="300dp"
+                app:cardCornerRadius="8dp"
+                app:cardElevation="4dp"
+                app:cardUseCompatPadding="true">
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:padding="8dp">
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Monthly Revenue"
+                            android:layout_alignParentStart="true"
+                            android:layout_centerVertical="true"/>
+                        <Spinner
+                            android:id="@+id/spinnerYear"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentEnd="true"/>
+                    </RelativeLayout>
+                    <com.github.mikephil.charting.charts.BarChart
+                        android:id="@+id/barChartMonthlyRevenue"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"/>
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+
+        </LinearLayout>
+    </ScrollView>
+</androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
